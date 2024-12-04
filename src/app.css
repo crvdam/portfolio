@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  --background-clr-hero: #010618;
+  --background-clr-secondary: #ddebff;
+  --background-clr-card: #eef5ff;
+  --text-clr-primary: #ff6500;
+  --text-clr-secondary: #ffffff;
+  --text-clr-tertiary: #a4bad8;
+  --text-clr-quaternary: #d7e6fd;
+}
+
+body {
+  background-color: var(--background-clr-secondary);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
