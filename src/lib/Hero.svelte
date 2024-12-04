@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     gap: 2rem;
     padding: 2rem 2.5rem 0 2.5rem;
   }
@@ -43,7 +44,6 @@
   .hero__text {
     text-align: center;
     order: 1;
-    margin-bottom: 2rem;
   }
 
   h1 {
@@ -53,16 +53,18 @@
   }
 
   h2 {
-    color: var(--text-clr-secondary);
+    color: var(--background-clr-card);
   }
 
   h3 {
-    color: var(--text-clr-tertiary);
+    color: var(--background-clr-projects);
+    font-size: 0.7rem;
+    font-weight: 600;
     margin-bottom: 2rem;
   }
 
   p {
-    color: var(--text-clr-tertiary);
+    color: var(--background-clr-projects);
   }
 
   .hero__image {
@@ -81,7 +83,7 @@
   }
 
   .hero__socials > a {
-    margin: 0 0.25em;
+    margin: 0 0.25rem;
   }
 
   .hero__socials > a > img {

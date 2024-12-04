@@ -10,7 +10,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   --background-clr-hero: #010618;
-  --background-clr-secondary: #ddebff;
+  --background-clr-projects: #ddebff;
   --background-clr-card: #eef5ff;
   --text-clr-primary: #ff6500;
   --text-clr-secondary: #ffffff;
@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: var(--background-clr-secondary);
+  background-color: var(--background-clr-projects);
 }
 
 h1 {

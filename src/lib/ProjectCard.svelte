@@ -6,11 +6,7 @@
 </script>
 
 <div class="card">
-  <img
-    class="card__image"
-    src={`"../../public/${imageName}`}
-    alt="Project screenshot"
-  />
+  <img class="card__image" src={`"/${imageName}`} alt="Project screenshot" />
   <h2>{title}</h2>
   <div class="card__seperator"></div>
   <p>
