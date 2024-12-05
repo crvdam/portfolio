@@ -8,7 +8,7 @@
 
 :root {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.8em;
   --background-clr-hero: #010618;
   --background-clr-projects: #ddebff;
   --background-clr-card: #eef5ff;
@@ -16,10 +16,12 @@
   --text-clr-secondary: #ffffff;
   --text-clr-tertiary: #a4bad8;
   --text-clr-quaternary: #d7e6fd;
+  background-color: var(--background-clr-hero);
+  overflow-x: hidden;
 }
 
 body {
-  background-color: var(--background-clr-projects);
+  background-color: var(--background-clr-hero);
 }
 
 h1 {
@@ -37,4 +39,16 @@ h3 {
 p {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 1.1em;
+  }
 }
