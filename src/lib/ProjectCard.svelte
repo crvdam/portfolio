@@ -2,23 +2,37 @@
   import githubIcon from "/ic-github-dark.png?url";
   import internetIcon from "/ic-internet-dark.png?url";
 
-  let { title, imageName, text, github, web } = $props();
+  let { title, imageName, text, github, web, tech } = $props();
 </script>
 
 <div class="card">
   <img class="card__image" src={`/${imageName}`} alt="Project screenshot" />
-  <h2>{title}</h2>
+
+  <h2 class="card__title">{title}</h2>
+
   <div class="card__seperator"></div>
-  <p>
+
+  <p class="card__text">
     {text}
   </p>
+
+  <div class="card__tech">
+    {#each tech as item}
+      <span class="card__tech__bubble">{item}</span>
+    {/each}
+  </div>
+
   <div class="card__links">
-    <a href={github}>
-      <img class="links__icon" src={githubIcon} alt="Github link" />
-    </a>
-    <a href={web}>
-      <img class="links__icon" src={internetIcon} alt="LinkedIn link" />
-    </a>
+    {#if github}
+      <a href={github}>
+        <img class="card__links__icon" src={githubIcon} alt="Github link" />
+      </a>
+    {/if}
+    {#if web}
+      <a href={web}>
+        <img class="card__links__icon" src={internetIcon} alt="LinkedIn link" />
+      </a>
+    {/if}
   </div>
 </div>
 
@@ -30,38 +44,66 @@
     border: 1px solid var(--text-clr-quaternary);
     border-radius: 5%;
     padding: 1rem;
-  }
-
-  .card__seperator {
-    height: 2px;
-    width: 50%;
-    background-color: var(--text-clr-primary);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    margin-bottom: 1.5rem;
-  }
-
-  .card > h2,
-  p {
-    text-align: left;
+    margin: 0.5rem;
+    display: grid;
+    gap: 1rem;
   }
 
   .card__image {
     width: 100%;
     border-radius: 5%;
-    margin-bottom: 1.5rem;
+
     object-fit: contain;
+  }
+
+  .card__title {
+    text-align: left;
+  }
+
+  .card__seperator {
+    height: 2px;
+    width: 40%;
+    background-color: var(--text-clr-primary);
+  }
+
+  .card__text {
+    text-align: left;
+  }
+
+  .card__tech {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .card__tech__bubble {
+    font-size: 0.6rem;
+    background-color: var(--background-clr-projects);
+    color: var(--background-clr-hero);
+    border: 1px solid var(--text-clr-quaternary);
+    border-radius: 10%;
+    padding: 0.5rem;
   }
 
   .card__links {
     text-align: left;
   }
 
-  .links__icon {
+  .card__links__icon {
     height: 2.5rem;
     margin-right: 0.5rem;
+  }
+
+  .card__links__icon:hover {
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
+  }
+
+  .card__links__icon:active {
+    transform: scale(0.9);
+    transition: 0.01;
   }
 </style>

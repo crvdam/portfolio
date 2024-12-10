@@ -5,6 +5,7 @@
 
 <main>
   <Hero />
+
   <section>
     <div class="custom-shape-divider-top-1733308504">
       <svg
@@ -20,7 +21,9 @@
       </svg>
     </div>
   </section>
+
   <Projects />
+
   <section>
     <div class="custom-shape-divider-bottom-1733316495">
       <svg
@@ -36,6 +39,7 @@
       </svg>
     </div>
   </section>
+
   <div class="footer">© 2024 Caspar van Dam</div>
 </main>
 

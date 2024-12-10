@@ -4,7 +4,7 @@
 </script>
 
 <div class="projects">
-  <h1>Projects</h1>
+  <h1 class="projects__header">Projects</h1>
   {#each projects as project}
     <ProjectCard
       title={project.title}
@@ -12,6 +12,7 @@
       text={project.text}
       github={project.github}
       web={project.web}
+      tech={project.tech}
     />
   {/each}
 </div>
@@ -20,11 +21,13 @@
   .projects {
     background-color: var(--background-clr-projects);
     color: var(--background-clr-hero);
-    padding: 3rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    display: grid;
+    justify-content: center;
     text-align: center;
+    padding: 3rem 0;
+  }
+
+  .projects__header {
+    margin-bottom: 2rem;
   }
 </style>

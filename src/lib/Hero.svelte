@@ -4,7 +4,7 @@
   import linkedinIcon from "/ic-linkedin-dark.png?url";
 
   const text =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus architecto officiis autem aliquam, saepe, temporibus eaminima ad laudantium accusantium iure ex. Amet voluptatibus ad soluta id doloremque! Tempore.";
+    "Chef turned full stack developer. With the same precision and passion I used to employ in the kitchen, I now aim to create simple, pixel-perfect user interfaces that are as effective as they are beautiful. ";
   const textArray = text.split(" ");
 </script>
 
@@ -109,17 +109,17 @@
     display: inline-block;
     opacity: 0;
     animation: wordOpacityTranslateY 3s ease-in-out forwards;
-    animation-delay: calc(0.05s * var(--i));
+    animation-delay: calc(0.08s * var(--i));
   }
 
   .hero__about__seperator {
     background-color: var(--text-clr-primary);
     opacity: 0;
     height: 1px;
-    width: 40%;
-    margin: 1rem auto 0 auto;
-    animation: seperator 2.5s ease-in-out forwards;
-    animation-delay: 2.5s;
+    width: 10rem;
+    margin: 2rem auto 0 auto;
+    animation: seperator 1.5s ease-in-out forwards;
+    animation-delay: 3.5s;
   }
 
   .hero__socials {
@@ -150,17 +150,17 @@
   svg path {
     fill: transparent;
     stroke: var(--text-clr-primary);
-    stroke-width: 2;
+    stroke-width: 1;
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
-    animation: textFill 2s ease-in-out 1 forwards;
+    animation: textFill 7s ease-in-out 1 forwards;
   }
 
   @keyframes textFill {
     0% {
       stroke-dashoffset: 300;
     }
-    50% {
+    55% {
       fill: transparent;
     }
     100% {
@@ -181,7 +181,7 @@
   @keyframes opacityTranslateY {
     0% {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(5px);
     }
     100% {
       opacity: 1;
@@ -192,11 +192,10 @@
   @keyframes wordOpacityTranslateY {
     0% {
       opacity: 0;
-      transform: translateY(10px);
     }
     60% {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
