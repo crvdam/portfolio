@@ -6,7 +6,9 @@
 </script>
 
 <div class="card">
-  <img class="card__image" src={`/${imageName}`} alt="Project screenshot" />
+  <div class="card__image">
+    <img src={`/${imageName}`} alt="Project screenshot" />
+  </div>
 
   <h2 class="card__title">{title}</h2>
 
@@ -45,15 +47,21 @@
     border-radius: 5%;
     padding: 1rem;
     margin: 0.5rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
   }
 
   .card__image {
     width: 100%;
-    border-radius: 5%;
+    height: 12rem;
+  }
 
-    object-fit: contain;
+  .card__image > img {
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
   }
 
   .card__title {
@@ -82,12 +90,15 @@
     background-color: var(--background-clr-projects);
     color: var(--background-clr-hero);
     border: 1px solid var(--text-clr-quaternary);
-    border-radius: 10%;
+    border-radius: 5%;
     padding: 0.5rem;
   }
 
   .card__links {
     text-align: left;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
   }
 
   .card__links__icon {
