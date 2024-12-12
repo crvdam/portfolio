@@ -104,6 +104,5 @@
 
   .card__links__icon:active {
     transform: scale(0.9);
-    transition: 0.01;
   }
 </style>

@@ -26,7 +26,7 @@ export const projects = [
     title: "Movie Database",
     imageName: "project-movies.png",
     text: "Front end for 'The Movie Database' API. Search for a movie and view its details such as genre, cast and trailer. Hero image determines background colors dynamically.",
-    github: "https://github.com/crvdam/real-estate",
+    github: "https://github.com/crvdam/movies",
     tech: ["JavaScript", "Vue", "Vite"],
   },
 ];

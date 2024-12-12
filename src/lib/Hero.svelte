@@ -1,7 +1,16 @@
 <script>
-  import me from "/me.jpg?url";
-  import githubIcon from "/ic-github-dark.png?url";
-  import linkedinIcon from "/ic-linkedin-dark.png?url";
+  import me from "/me.png";
+  import down from "/ic-down.png";
+  import githubIcon from "/ic-github-dark.png";
+  import linkedinIcon from "/ic-linkedin-dark.png";
+
+  function scrollIntoView() {
+    const el = document.querySelector(".projects");
+    if (!el) return;
+    el.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 
   const text =
     "Chef turned full stack developer. With the same precision and passion I used to employ in the kitchen, I now aim to create simple, pixel-perfect user interfaces that are as effective as they are beautiful. ";
@@ -52,19 +61,24 @@
       <img class="hero__socials__icon" src={linkedinIcon} alt="LinkedIn" />
     </a>
   </div>
+  <button class="hero__page-down" on:click={scrollIntoView}>
+    <img src={down} alt="To projects" />
+  </button>
 </div>
 
 <style>
   .hero {
     background-color: var(--background-clr-hero);
     display: grid;
+    margin: auto;
+    align-items: center;
     padding: 3rem 1rem 0.5rem 1rem;
     min-height: 100vh;
+    max-width: 600px;
     text-align: center;
   }
 
   .hero__image {
-    order: 0;
     animation: opacity 2s;
   }
 
@@ -79,7 +93,6 @@
     color: var(--background-clr-card);
     font-size: 0.7rem;
     font-weight: 600;
-    margin-bottom: 2rem;
     opacity: 0;
     animation: opacityTranslateY 1s ease-in-out 1 forwards;
     animation-delay: 1s;
@@ -88,7 +101,6 @@
   .hero__about {
     color: var(--text-clr-tertiary);
     position: relative;
-    margin-bottom: 4rem;
   }
 
   .hero__about__header {
@@ -109,7 +121,7 @@
     display: inline-block;
     opacity: 0;
     animation: wordOpacityTranslateY 3s ease-in-out forwards;
-    animation-delay: calc(0.08s * var(--i));
+    animation-delay: calc(0.05s * var(--i));
   }
 
   .hero__about__seperator {
@@ -123,6 +135,7 @@
   }
 
   .hero__socials {
+    align-self: start;
     animation: opacity 2s;
   }
 
@@ -153,7 +166,17 @@
     stroke-width: 1;
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
-    animation: textFill 7s ease-in-out 1 forwards;
+    animation: textFill 3s ease-in-out 1 forwards;
+  }
+
+  .hero__page-down > img {
+    height: 2rem;
+    width: 2rem;
+    animation: grow 2s ease-in-out infinite;
+  }
+
+  .hero__page-down > img:hover {
+    cursor: pointer;
   }
 
   @keyframes textFill {
@@ -211,6 +234,18 @@
     100% {
       opacity: 1;
       transform: scale(1, 1);
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 </style>
