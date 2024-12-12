@@ -5,7 +5,7 @@
 
 <div class="projects">
   <h1 class="projects__header">Projects</h1>
-  <div class="projects-wrapper">
+  <div class="project-cards-wrapper">
     {#each projects as project}
       <ProjectCard
         title={project.title}
@@ -27,6 +27,7 @@
     justify-content: center;
     text-align: center;
     padding: 3rem 0;
+    margin: auto;
   }
 
   .projects__header {
@@ -34,8 +35,11 @@
   }
 
   @media (min-width: 768px) {
-    .projects-wrapper {
+    .project-cards-wrapper {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
     }
   }
 </style>
