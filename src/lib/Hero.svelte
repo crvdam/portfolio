@@ -1,8 +1,8 @@
 <script>
-  import me from "/me.png";
-  import down from "/ic-down.png";
-  import githubIcon from "/ic-github-dark.png";
-  import linkedinIcon from "/ic-linkedin-dark.png";
+  import me from "/me.png?url";
+  import down from "/ic-down.png?url";
+  import githubIcon from "/ic-github-dark.png?url";
+  import linkedinIcon from "/ic-linkedin-dark.png?url";
 
   function scrollIntoView() {
     const el = document.querySelector(".projects");
