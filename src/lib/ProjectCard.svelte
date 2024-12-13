@@ -45,7 +45,7 @@
     color: var(--background-clr-hero);
     border: 1px solid var(--text-clr-quaternary);
     border-radius: 5%;
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,7 @@
   .card__image {
     width: 100%;
     height: 12rem;
+    margin-bottom: 1rem;
   }
 
   .card__image > img {

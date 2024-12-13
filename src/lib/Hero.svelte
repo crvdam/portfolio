@@ -1,5 +1,5 @@
 <script>
-  import me from "/me.png";
+  import me from "/me.jpg";
   import down from "/ic-down.png";
   import githubIcon from "/ic-github-dark.png";
   import linkedinIcon from "/ic-linkedin-dark.png";
@@ -79,6 +79,7 @@
 
   .hero__image {
     animation: opacity 2s;
+    margin: 2rem 0;
   }
 
   .hero__image > img {
