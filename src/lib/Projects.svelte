@@ -3,8 +3,11 @@
   import { projects } from "../lib/projectInfo.js";
 </script>
 
-<div class="projects">
-  <h1 class="projects__header">Projects</h1>
+<section class="projects">
+  <div class="projects__header">
+    <h1>Projects</h1>
+    <h3>a collection of my personal work</h3>
+  </div>
   <div class="project-cards-wrapper">
     {#each projects as project}
       <ProjectCard
@@ -17,7 +20,7 @@
       />
     {/each}
   </div>
-</div>
+</section>
 
 <style>
   .projects {

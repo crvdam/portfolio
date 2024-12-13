@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <div class="footer">© 2024 Caspar van Dam</div>
+  <div class="footer">© 2024 Caspar van Dam - made with Svelte</div>
 </main>
 
 <style>
@@ -52,6 +52,7 @@
     height: 3rem;
     font-size: 0.7rem;
   }
+
   section {
     position: relative;
   }
