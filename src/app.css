@@ -25,11 +25,11 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 h3 {
@@ -46,6 +46,3 @@ button {
   background: none;
   border: none;
 }
-
-
-

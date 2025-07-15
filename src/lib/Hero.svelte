@@ -1,6 +1,5 @@
 <script>
-  import me from "/me.jpg";
-  import down from "/ic-down.png";
+  import downIcon from "/ic-down.png";
   import githubIcon from "/ic-github-dark.png";
   import linkedinIcon from "/ic-linkedin-dark.png";
 
@@ -13,19 +12,16 @@
   }
 
   const text =
-    "Chef turned full stack developer. With the same precision and passion I used to employ in the kitchen, I now aim to create simple, pixel-perfect user interfaces that are both beautiful and effective. ";
+    "Chef turned developer. I bring the same care and attention to detail from the kitchen to the code, aiming to create clean, user-friendly interfaces. Life-long learner, always curious - and open to freelance opportunities.";
   const textArray = text.split(" ");
 </script>
 
 <section class="hero">
-  <div class="hero__image">
-    <img src={me} alt="Me." />
-  </div>
-
   <div class="hero__info-wrapper">
     <div class="hero__name-and-title">
+      <h1 class="sr-only">Caspar van Dam</h1>
       <svg
-        width="20rem"
+        width="450px"
         height=""
         viewBox="0 0 407 45"
         fill="none"
@@ -43,7 +39,6 @@
     </div>
 
     <div class="hero__about">
-      <h2 class="hero__about__header">About</h2>
       <div class="hero__about__text">
         {#each textArray as word, index}
           <p class="hero__about__word" style="--i:{index}">
@@ -64,51 +59,35 @@
     </div>
   </div>
   <button class="hero__page-down" on:click={scrollIntoView}>
-    <img src={down} alt="To projects" />
+    <img src={downIcon} alt="To projects" />
   </button>
 </section>
 
 <style>
   .hero {
     background-color: var(--background-clr-hero);
-    min-height: 100vh;
+    height: calc(100vh + 1px);
+    padding-top: 16rem;
     max-width: 768px;
-    padding: 1rem;
     text-align: center;
   }
 
-  .hero__image {
-    animation: opacity 2s;
-    margin: 2rem 0;
-  }
-
-  .hero__image > img {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: cover;
+  .hero__name-and-title svg {
+    width: 95%;
   }
 
   .hero__name-and-title__title {
     color: var(--background-clr-card);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
     opacity: 0;
     animation: opacityTranslateY 1s ease-in-out 1 forwards;
     animation-delay: 1s;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   .hero__about {
     color: var(--text-clr-tertiary);
-  }
-
-  .hero__about__header {
-    color: var(--background-clr-card);
-    opacity: 0;
-    animation: opacityTranslateY 1s ease-in-out forwards;
-    animation-delay: 1.5s;
-    margin-bottom: 1rem;
   }
 
   .hero__about__text {
@@ -129,10 +108,9 @@
     opacity: 0;
     height: 1px;
     width: 10rem;
-    margin: 2rem auto 0 auto;
     animation: seperator 1.5s ease-in-out forwards;
     animation-delay: 3.5s;
-    margin-bottom: 2rem;
+    margin: 2rem auto 3rem;
   }
 
   .hero__socials {
@@ -191,6 +169,15 @@
       display: flex;
       align-items: center;
       margin: auto;
+      padding-top: 0;
+    }
+
+    .hero__name-and-title svg {
+      width: 450px;
+    }
+
+    .hero__name-and-title__title {
+      font-size: 1rem;
     }
   }
 
@@ -262,5 +249,17 @@
     100% {
       transform: scale(1);
     }
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>

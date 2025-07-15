@@ -5,8 +5,7 @@
 
 <section class="projects">
   <div class="projects__header">
-    <h1>Projects</h1>
-    <h3>a collection of my personal work</h3>
+    <h2>A selection of my personal projects</h2>
   </div>
   <div class="project-cards-wrapper">
     {#each projects as project}

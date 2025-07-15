@@ -1,6 +1,7 @@
 <script>
   import Hero from "./lib/Hero.svelte";
   import Projects from "./lib/Projects.svelte";
+  import Footer from "./lib/Footer.svelte";
 </script>
 
 <main>
@@ -39,20 +40,11 @@
       </svg>
     </div>
   </section>
-
-  <div class="footer">© 2024 Caspar van Dam - made with Svelte</div>
 </main>
 
-<style>
-  .footer {
-    background-color: var(--background-clr-hero);
-    color: var(--text-clr-tertiary);
-    text-align: center;
-    padding-top: 1.5rem;
-    height: 3rem;
-    font-size: 0.7rem;
-  }
+<Footer />
 
+<style>
   section {
     position: relative;
   }
@@ -70,7 +62,7 @@
   .custom-shape-divider-top-1733308504 svg {
     position: relative;
     display: block;
-    width: calc(100%);
+    width: 100%;
     height: 20px;
   }
 

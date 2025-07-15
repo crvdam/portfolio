@@ -62,7 +62,7 @@
     border-radius: 5%;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: contain;
   }
 
   .card__title {
@@ -70,8 +70,8 @@
   }
 
   .card__seperator {
-    height: 2px;
-    width: 40%;
+    height: 1px;
+    width: 70px;
     background-color: var(--text-clr-primary);
   }
 
@@ -87,7 +87,7 @@
   }
 
   .card__tech__bubble {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     background-color: var(--background-clr-projects);
     color: var(--background-clr-hero);
     border: 1px solid var(--text-clr-quaternary);
@@ -108,10 +108,12 @@
   }
 
   .card__links__icon:hover {
+    filter: invert(7%) sepia(11%) saturate(3319%) hue-rotate(190deg)
+      brightness(30%) contrast(109%);
     height: 2.5rem;
     margin-right: 0.5rem;
     transform: scale(1.1);
-    transition: 0.2s ease-out;
+    transition: transform 0.2s ease-out;
   }
 
   .card__links__icon:active {
