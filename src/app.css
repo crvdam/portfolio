@@ -8,7 +8,7 @@
 
 :root {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
+  font-size: 16px;
   --background-clr-hero: #010618;
   --background-clr-projects: #ddebff;
   --background-clr-card: #eef5ff;
@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 h2 {
