@@ -41,6 +41,7 @@
 <style>
   .card {
     width: 20rem;
+    height: 35rem;
     background-color: var(--background-clr-card);
     color: var(--background-clr-hero);
     border: 1px solid var(--text-clr-quaternary);

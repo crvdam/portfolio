@@ -25,20 +25,26 @@
   .projects {
     background-color: var(--background-clr-projects);
     color: var(--background-clr-hero);
-    display: grid;
-    justify-content: center;
-    text-align: center;
     padding: 3rem 0;
+    margin: auto;
+  }
+
+  .project-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
   }
 
   .projects__header {
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   @media (min-width: 768px) {
     .project-cards-wrapper {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       margin: auto;
