@@ -67,7 +67,7 @@
   .hero {
     background-color: var(--background-clr-hero);
     height: calc(100vh + 1px);
-    padding-top: 16rem;
+    padding-top: 14rem;
     max-width: 768px;
     text-align: center;
   }
@@ -83,7 +83,7 @@
     opacity: 0;
     animation: opacityTranslateY 1s ease-in-out 1 forwards;
     animation-delay: 1s;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   .hero__about {
@@ -173,7 +173,7 @@
     }
 
     .hero__name-and-title svg {
-      width: 450px;
+      width: 650px;
     }
 
     .hero__name-and-title__title {

@@ -9,7 +9,7 @@
     <h2>A selection of my personal projects</h2>
   </div>
   <div class="project-cards-wrapper">
-    {#each projects as project}
+    <!-- {#each projects as project}
       <ProjectCard
         title={project.title}
         imageName={project.imageName}
@@ -18,9 +18,9 @@
         web={project.web}
         stack={project.stack}
       />
-    {/each}
+    {/each} -->
 
-    <!-- {#each projects as project}
+    {#each projects as project}
       <ProjectCardNew
         title={project.title}
         imageName={project.imageName}
@@ -29,7 +29,7 @@
         web={project.web}
         stack={project.stack}
       />
-    {/each} -->
+    {/each}
   </div>
 </section>
 
@@ -51,6 +51,7 @@
   }
 
   .projects__header {
+    font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -62,6 +63,12 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: auto;
+    }
+
+    .projects__header {
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      text-align: center;
     }
   }
 </style>

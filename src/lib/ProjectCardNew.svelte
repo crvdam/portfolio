@@ -13,12 +13,26 @@
   <h4 class="tile__title">{title}</h4>
 
   <div class="tile__infoContainer">
-    <p>{description}</p>
-    <ul>
+    <!-- <p>{description}</p> -->
+    <ul class="tile__list">
       {#each stack as stackItem}
-        <li>{stackItem}</li>
+        <li class="tile__stackItem">{stackItem}</li>
       {/each}
     </ul>
+
+    <div class="tile_list">
+      {#if github}
+        <a href={github}>
+          <img class="tile__icon" src={githubIcon} alt="Github link" />
+        </a>
+      {/if}
+
+      {#if web}
+        <a href={web}>
+          <img class="tile__icon" src={internetIcon} alt="Project link" />
+        </a>
+      {/if}
+    </div>
   </div>
 </div>
 
@@ -33,6 +47,14 @@
       box-shadow 0.4s;
   }
 
+  .tile:hover {
+    transform: translate(5px, -10px) scale(1.03);
+    box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    opacity: 1;
+    filter: brightness(100%);
+  }
+
   .tile__image {
     height: 100%;
     width: 100%;
@@ -45,40 +67,90 @@
     }
   }
 
+  .tile:hover .tile__image {
+    filter: brightness(100%);
+  }
+
   .tile__title {
-    color: white;
+    color: var(--background-clr-card);
     position: absolute;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
     bottom: 3rem;
-    left: 2.5rem;
-    transition: transform 0.5s;
+    left: 1.5rem;
+    transition: transform 0.5s ease-out;
+  }
+
+  .tile:hover .tile__title {
+    transform: translateY(-9rem);
   }
 
   .tile__infoContainer {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--background-clr-card);
+    padding: 1rem;
     border-radius: 5px;
     position: absolute;
     bottom: 1rem;
     left: 1rem;
     right: 1rem;
+    min-height: 10rem;
+    transform: scaleY(0);
+    transition: transform 0.7s ease-out;
+    transform-origin: bottom;
   }
 
-  .tile:hover .tile__title {
-    transform: translateY(-15rem);
-  }
-
-  .tile:hover {
-    transform: translate(5px, -10px) scale(1.03);
-    box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    opacity: 1;
-    filter: brightness(100%);
+  .tile__infoContainer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
   }
 
   .tile:hover .tile__infoContainer {
-    transform: translate(5px, -10px) scale(1.03);
-    z-index: 20;
+    transform: scaleY(1);
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+  }
+
+  .tile__list {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tile__stackItem {
+    padding: 5px;
+    background-color: var(--background-clr-projects);
+    color: var(--background-clr-hero);
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .tile__icon {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  .tile__icon:hover {
+    filter: grayscale(100%) brightness(200%);
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+    transition: transform 0.2s ease-out;
+  }
+
+  .tile__icon:active {
+    transform: scale(0.9);
   }
 </style>
