@@ -1,5 +1,6 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
+  import ProjectCardNew from "./ProjectCardNew.svelte";
   import { projects } from "../lib/projectInfo.js";
 </script>
 
@@ -12,12 +13,23 @@
       <ProjectCard
         title={project.title}
         imageName={project.imageName}
-        text={project.text}
+        description={project.description}
         github={project.github}
         web={project.web}
-        tech={project.tech}
+        stack={project.stack}
       />
     {/each}
+
+    <!-- {#each projects as project}
+      <ProjectCardNew
+        title={project.title}
+        imageName={project.imageName}
+        description={project.description}
+        github={project.github}
+        web={project.web}
+        stack={project.stack}
+      />
+    {/each} -->
   </div>
 </section>
 
@@ -34,6 +46,8 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
+    gap: 2rem;
+    max-width: 1400px;
   }
 
   .projects__header {

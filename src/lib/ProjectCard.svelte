@@ -2,7 +2,7 @@
   import githubIcon from "/ic-github-dark.png?url";
   import internetIcon from "/ic-internet-dark.png?url";
 
-  let { title, imageName, text, github, web, tech } = $props();
+  let { title, imageName, description, github, web, stack } = $props();
 </script>
 
 <div class="card">
@@ -15,11 +15,11 @@
   <div class="card__seperator"></div>
 
   <p class="card__text">
-    {text}
+    {description}
   </p>
 
   <div class="card__tech">
-    {#each tech as item}
+    {#each stack as item}
       <span class="card__tech__bubble">{item}</span>
     {/each}
   </div>
