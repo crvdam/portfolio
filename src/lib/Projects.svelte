@@ -35,7 +35,13 @@
 
 <style>
   .projects {
-    background-color: var(--background-clr-projects);
+    background: linear-gradient(
+      90deg,
+      var(--background-clr-projects1) 0%,
+      var(--background-clr-projects2) 30%,
+      var(--background-clr-projects2) 70%,
+      var(--background-clr-projects3) 100%
+    );
     color: var(--background-clr-hero);
     padding: 3rem 0;
     margin: auto;

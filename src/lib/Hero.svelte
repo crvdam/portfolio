@@ -12,7 +12,7 @@
   }
 
   const text =
-    "Chef turned developer. I bring the same care and attention to detail from the kitchen to the code, aiming to create clean, user-friendly interfaces. Life-long learner, always curious - and open to freelance opportunities.";
+    "Chef turned developer. I bring the same care and attention to detail from the kitchen to code, aiming to create clean, user-friendly interfaces. Life-long learner, passionate about coding and always curious. I am open to freelance opportunities";
   const textArray = text.split(" ");
 </script>
 
@@ -68,7 +68,7 @@
     background-color: var(--background-clr-hero);
     height: calc(100vh + 1px);
     padding-top: 14rem;
-    max-width: 768px;
+    max-width: 1000px;
     text-align: center;
   }
 
@@ -82,7 +82,7 @@
     font-weight: 600;
     opacity: 0;
     animation: opacityTranslateY 1s ease-in-out 1 forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     margin-bottom: 4rem;
   }
 
@@ -93,13 +93,13 @@
   .hero__about__text {
     line-height: 1.8;
     margin: auto;
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .hero__about__word {
     display: inline-block;
     opacity: 0;
-    animation: wordOpacityTranslateY 3s ease-in-out forwards;
+    animation: wordOpacityTranslateY 2s ease-in-out forwards;
     animation-delay: calc(0.05s * var(--i));
   }
 
@@ -109,7 +109,7 @@
     height: 1px;
     width: 10rem;
     animation: seperator 1.5s ease-in-out forwards;
-    animation-delay: 3.5s;
+    animation-delay: 3s;
     margin: 2rem auto 3rem;
   }
 
@@ -173,11 +173,11 @@
     }
 
     .hero__name-and-title svg {
-      width: 650px;
+      width: 750px;
     }
 
     .hero__name-and-title__title {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 

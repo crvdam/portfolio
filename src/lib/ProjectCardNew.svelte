@@ -10,10 +10,10 @@
     <img src={`/${imageName}`} alt={`${title} Project`} />
   </div>
 
-  <h4 class="tile__title">{title}</h4>
+  <div class="tile__infoBackground"></div>
 
-  <div class="tile__infoContainer">
-    <!-- <p>{description}</p> -->
+  <h4 class="tile__title">{title}</h4>
+  <div class="tile__infoDetails">
     <ul class="tile__list">
       {#each stack as stackItem}
         <li class="tile__stackItem">{stackItem}</li>
@@ -41,7 +41,6 @@
     width: 22rem;
     height: 25rem;
     position: relative;
-    border-radius: 5px;
     transition:
       transform 0.5s,
       box-shadow 0.4s;
@@ -59,11 +58,10 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    filter: brightness(40%);
+    filter: brightness(30%);
     transition: filter 0.5s;
 
     img {
-      border-radius: 5px;
     }
   }
 
@@ -73,52 +71,53 @@
 
   .tile__title {
     color: var(--background-clr-card);
-    position: absolute;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
     bottom: 3rem;
     left: 1.5rem;
-    transition: transform 0.5s ease-out;
+    transition: bottom 0.5s ease-out;
+    position: absolute;
   }
 
   .tile:hover .tile__title {
-    transform: translateY(-9rem);
+    bottom: 10rem;
+    transition: bottom 0.5s ease-out;
   }
 
-  .tile__infoContainer {
+  .tile__infoBackground {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--background-clr-card);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
-    border-radius: 5px;
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    min-height: 10rem;
-    transform: scaleY(0);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    transform: scaleY(1);
     transition: transform 0.7s ease-out;
     transform-origin: bottom;
   }
 
-  .tile__infoContainer:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    opacity: 0.7;
-    z-index: -1;
+  .tile:hover .tile__infoBackground {
+    transform: scaleY(2.5);
+    transition: transform 0.5s ease-out;
   }
 
-  .tile:hover .tile__infoContainer {
+  .tile__infoDetails {
+    position: absolute;
+    transform: scaleY(0);
+    transition: transform 0.5s ease-out;
+    transform-origin: bottom;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .tile:hover .tile__infoDetails {
     transform: scaleY(1);
-    transition: transform 0.5s;
-    transition-delay: 0.3s;
+    transition: transform 0.5s ease-out;
   }
 
   .tile__list {
@@ -126,11 +125,12 @@
     list-style: none;
     gap: 0.5rem;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
 
   .tile__stackItem {
     padding: 5px;
-    background-color: var(--background-clr-projects);
+    background-color: var(--background-clr-projects1);
     color: var(--background-clr-hero);
     border-radius: 5px;
     font-size: 0.7rem;
