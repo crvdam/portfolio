@@ -76,7 +76,7 @@
   .aboutMe {
     max-width: 1000px;
     margin: auto;
-    padding: 10rem 0;
+    padding: 10rem 2rem;
     color: var(--background-clr-card);
 
     h3 {
