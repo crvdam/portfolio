@@ -3,7 +3,7 @@
   import githubIcon from "/ic-github-dark.png?url";
   import internetIcon from "/ic-internet-dark.png?url";
 
-  let { title, imageName, videoName, description, github, web, stack } =
+  let { title, imageName, videoName, description, github, web, stack, index } =
     $props();
 
   let isDesktop = $state(false);
@@ -17,6 +17,8 @@
 
     window.addEventListener("resize", handleResize);
   });
+
+  // let rotation = -20 + index * 10;
 </script>
 
 <div class="tile">
@@ -152,7 +154,7 @@
   @media screen and (min-width: 1280px) {
     .tile:hover {
       transform: translate(5px, -10px) scale(1.2);
-      box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.6);
+      box-shadow: -5px 20px 5px rgba(0, 0, 0, 0.6);
       z-index: 10;
       opacity: 1;
       filter: brightness(100%);

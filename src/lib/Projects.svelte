@@ -8,7 +8,7 @@
   <div class="projects__header">
     <h2>A selection of my personal projects</h2>
   </div>
-  <div class="project-cards-wrapper">
+  <div class="projects__tileWrapper">
     <!-- {#each projects as project}
       <ProjectCard
         title={project.title}
@@ -20,7 +20,7 @@
       />
     {/each} -->
 
-    {#each projects as project}
+    {#each projects as project, index}
       <ProjectCardNew
         title={project.title}
         imageName={project.imageName}
@@ -29,6 +29,7 @@
         github={project.github}
         web={project.web}
         stack={project.stack}
+        {index}
       />
     {/each}
   </div>
@@ -68,7 +69,7 @@
       padding: 10rem 0;
     }
 
-    .project-cards-wrapper {
+    .projects__tileWrapper {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -80,6 +81,10 @@
     .projects__header {
       margin-bottom: 6rem;
       text-align: center;
+    }
+
+    .projects__tileWrapper:nth-child(1) {
+      transform: scale(20);
     }
   }
 </style>

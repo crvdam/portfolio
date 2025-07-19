@@ -7,7 +7,7 @@ export const projects = [
     github: "https://github.com/crvdam",
     web: "",
     stack: ["JavaScript", "Python", "Django"],
-    videoName: "",
+    videoName: "project-messenger.webm",
     videoExternalSource: "",
   },
   {
@@ -17,7 +17,7 @@ export const projects = [
     github: "https://github.com/crvdam/celebrity",
     web: "",
     stack: ["TypeScript", "Svelte", "Vite"],
-    videoName: "",
+    videoName: "project-portrait.webm",
     videoExternalSource: "",
   },
   {
@@ -26,7 +26,7 @@ export const projects = [
     description: "Search for, filter, create and delete house listings.",
     github: "https://github.com/crvdam/real-estate",
     stack: ["Vue", "Vue Router", "Pinia", "Vite"],
-    videoName: "",
+    videoName: "project-realestate.webm",
     videoExternalSource: "",
   },
   {
