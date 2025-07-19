@@ -10,9 +10,9 @@
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   --background-clr-hero: #010618;
-  --background-clr-projects1: #e3e8fb;
+  --background-clr-projects1: #cad3f4;
   --background-clr-projects2: #cad3f4;
-  --background-clr-projects3: #cbd2f1;
+  --background-clr-projects3: #cad3f4;
   --background-clr-card: #eef5ff;
   --text-clr-primary: #ff6500;
   --text-clr-secondary: #ffffff;
@@ -35,8 +35,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 p {
@@ -49,8 +48,13 @@ button {
   border: none;
 }
 
-img {
+img,
+video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
+}
+
+ul {
+  list-style: none;
 }

@@ -1,6 +1,7 @@
 <script>
   import Hero from "./lib/Hero.svelte";
   import Projects from "./lib/Projects.svelte";
+  import AboutMe from "./lib/AboutMe.svelte";
   import Footer from "./lib/Footer.svelte";
 </script>
 
@@ -8,7 +9,7 @@
   <Hero />
 
   <section>
-    <div class="custom-shape-divider-top-1733308504">
+    <div class="dividerTop">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,7 @@
   <Projects />
 
   <section>
-    <div class="custom-shape-divider-bottom-1733316495">
+    <div class="dividerBottom">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +41,8 @@
       </svg>
     </div>
   </section>
+
+  <AboutMe />
 </main>
 
 <Footer />
@@ -49,7 +52,7 @@
     position: relative;
   }
 
-  .custom-shape-divider-top-1733308504 {
+  .dividerTop {
     position: absolute;
     top: -2px;
     left: 0;
@@ -59,34 +62,35 @@
     transform: rotate(180deg);
   }
 
-  .custom-shape-divider-top-1733308504 svg {
+  .dividerTop svg {
     position: relative;
     display: block;
     width: 100%;
     height: 150px;
   }
 
-  .custom-shape-divider-top-1733308504 .shape-fill {
+  .dividerTop .shape-fill {
     fill: var(--background-clr-hero);
   }
 
-  .custom-shape-divider-bottom-1733316495 {
+  .dividerBottom {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    bottom: -2px;
   }
 
-  .custom-shape-divider-bottom-1733316495 svg {
+  .dividerBottom svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 150px;
   }
 
-  .custom-shape-divider-bottom-1733316495 .shape-fill {
+  .dividerBottom .shape-fill {
     fill: var(--background-clr-hero);
   }
 </style>

@@ -88,13 +88,6 @@
     height: 100%;
   }
 
-  .tile__video video,
-  .tile__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-
   .tile__video {
     display: none;
   }
@@ -130,7 +123,6 @@
 
   .tile__list {
     display: flex;
-    list-style: none;
     gap: 0.5rem;
     flex-wrap: wrap;
     margin-bottom: 1rem;
@@ -181,34 +173,33 @@
 
     .tile__title {
       bottom: 1rem;
-      transition: bottom 0.5s ease-out;
+      transition: bottom 0.3s ease-out;
     }
 
     .tile:hover .tile__title {
       bottom: 8rem;
-      transition: bottom 0.5s ease-out;
+      transition: bottom 0.3s ease-out;
     }
 
     .tile__infoBackground {
-      transition: transform 0.7s ease-out;
+      transition: transform 0.3s ease-out;
       transform-origin: bottom;
       height: 3rem;
     }
 
     .tile:hover .tile__infoBackground {
       transform: scaleY(3.3);
-      transition: transform 0.5s ease-out;
+      transition: transform 0.3s ease-out;
     }
 
     .tile__infoDetails {
-      transform: scaleY(0);
-      transition: transform 0.5s ease-out;
-      transform-origin: bottom;
+      opacity: 0;
     }
 
     .tile:hover .tile__infoDetails {
-      transform: scaleY(1);
-      transition: transform 0.5s ease-out;
+      opacity: 1;
+      transition: opacity 0.2s ease-out;
+      transition-delay: 0.3s;
     }
 
     .tile__icon:hover {

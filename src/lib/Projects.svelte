@@ -9,17 +9,6 @@
     <h2>A selection of my personal projects</h2>
   </div>
   <div class="projects__tileWrapper">
-    <!-- {#each projects as project}
-      <ProjectCard
-        title={project.title}
-        imageName={project.imageName}
-        description={project.description}
-        github={project.github}
-        web={project.web}
-        stack={project.stack}
-      />
-    {/each} -->
-
     {#each projects as project, index}
       <ProjectCardNew
         title={project.title}
@@ -45,11 +34,11 @@
       var(--background-clr-projects3) 100%
     );
     color: var(--background-clr-hero);
-    padding: 8rem 0;
+    padding: 10rem 0;
     margin: auto;
   }
 
-  .project-cards-wrapper {
+  .projects__tileWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;

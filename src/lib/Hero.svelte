@@ -4,7 +4,7 @@
   import linkedinIcon from "/ic-linkedin-dark.png";
 
   function scrollIntoView() {
-    const el = document.querySelector(".projects");
+    const el = document.querySelector(".projects__header");
     if (!el) return;
     el.scrollIntoView({
       behavior: "smooth",
