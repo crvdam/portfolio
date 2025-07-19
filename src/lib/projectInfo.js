@@ -6,7 +6,7 @@ export const projects = [
       "Fullstack capstone project for Harvard's CS50 Web, written in vanilla JS and Django.",
     github: "https://github.com/crvdam",
     web: "",
-    stack: ["JavaScript", "Python", "Django", "Django Channels"],
+    stack: ["JavaScript", "Python", "Django"],
     videoName: "",
     videoExternalSource: "",
   },
@@ -36,7 +36,7 @@ export const projects = [
       "Uses TMDB API. Infinite scroll. Background adapts to hero image's colors.",
     github: "https://github.com/crvdam/movies",
     stack: ["Vue", "Vue Router", "Vite"],
-    videoName: "moviedatabase.webm",
+    videoName: "project-movies.webm",
     videoExternalSource: "",
   },
 ];

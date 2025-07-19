@@ -2,12 +2,27 @@
   import githubIcon from "/ic-github-dark.png?url";
   import internetIcon from "/ic-internet-dark.png?url";
 
-  let { title, imageName, description, github, web, stack } = $props();
+  let { title, imageName, videoName, description, github, web, stack } =
+    $props();
 </script>
 
 <div class="tile">
-  <div class="tile__image">
-    <img src={`/${imageName}`} alt={`${title} Project`} />
+  <div class="tile__media">
+    {#if videoName}
+      <div class="tile__video">
+        <video autoplay loop>
+          <source src={`/${videoName}`} />
+        </video>
+      </div>
+    {/if}
+
+    <div class="tile__image">
+      {#if imageName}
+        <img src={`/${imageName}`} alt={`${title} Project`} />
+      {:else}
+        <img src={``} alt={`${title} Project`} />
+      {/if}
+    </div>
   </div>
 
   <div class="tile__infoBackground"></div>
@@ -38,8 +53,8 @@
 
 <style>
   .tile {
-    width: 22rem;
-    height: 25rem;
+    width: 400px;
+    height: 300px;
     position: relative;
     transition:
       transform 0.5s,
@@ -47,26 +62,50 @@
   }
 
   .tile:hover {
-    transform: translate(5px, -10px) scale(1.03);
+    transform: translate(5px, -10px) scale(1.2);
     box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.6);
     z-index: 10;
     opacity: 1;
     filter: brightness(100%);
   }
 
-  .tile__image {
+  .tile__media {
     height: 100%;
     width: 100%;
     position: absolute;
     filter: brightness(30%);
     transition: filter 0.5s;
-
-    img {
-    }
   }
 
-  .tile:hover .tile__image {
+  .tile__image,
+  .tile__video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tile__video video,
+  .tile__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .tile:hover .tile__media {
     filter: brightness(100%);
+  }
+
+  .tile__video {
+    display: none;
+  }
+
+  .tile:hover .tile__media:has(video) {
+    .tile__video {
+      display: block;
+    }
+
+    .tile__image {
+      display: none;
+    }
   }
 
   .tile__title {
@@ -74,14 +113,14 @@
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    bottom: 3rem;
-    left: 1.5rem;
+    bottom: 1rem;
+    left: 1rem;
     transition: bottom 0.5s ease-out;
     position: absolute;
   }
 
   .tile:hover .tile__title {
-    bottom: 10rem;
+    bottom: 8rem;
     transition: bottom 0.5s ease-out;
   }
 
@@ -95,14 +134,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 5rem;
+    height: 3rem;
     transform: scaleY(1);
     transition: transform 0.7s ease-out;
     transform-origin: bottom;
   }
 
   .tile:hover .tile__infoBackground {
-    transform: scaleY(2.5);
+    transform: scaleY(3.3);
     transition: transform 0.5s ease-out;
   }
 
@@ -152,5 +191,8 @@
 
   .tile__icon:active {
     transform: scale(0.9);
+  }
+
+  @media screen and (min-width: 1280px) {
   }
 </style>

@@ -24,6 +24,7 @@
       <ProjectCardNew
         title={project.title}
         imageName={project.imageName}
+        videoName={project.videoName}
         description={project.description}
         github={project.github}
         web={project.web}
@@ -63,6 +64,10 @@
   }
 
   @media (min-width: 768px) {
+    .projects {
+      padding: 10rem 0;
+    }
+
     .project-cards-wrapper {
       display: flex;
       flex-direction: row;
@@ -72,8 +77,7 @@
     }
 
     .projects__header {
-      margin-top: 2rem;
-      margin-bottom: 5rem;
+      margin-bottom: 6rem;
       text-align: center;
     }
   }
