@@ -51,7 +51,7 @@
 
   .custom-shape-divider-top-1733308504 {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -63,7 +63,7 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 20px;
+    height: 150px;
   }
 
   .custom-shape-divider-top-1733308504 .shape-fill {
@@ -83,7 +83,7 @@
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 20px;
+    height: 150px;
   }
 
   .custom-shape-divider-bottom-1733316495 .shape-fill {

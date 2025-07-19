@@ -1,16 +1,29 @@
 <script>
+  import { onMount } from "svelte";
   import githubIcon from "/ic-github-dark.png?url";
   import internetIcon from "/ic-internet-dark.png?url";
 
   let { title, imageName, videoName, description, github, web, stack } =
     $props();
+
+  let isDesktop = $state(false);
+
+  onMount(() => {
+    isDesktop = window.innerWidth >= 1000;
+
+    const handleResize = () => {
+      isDesktop = window.innerWidth >= 1000;
+    };
+
+    window.addEventListener("resize", handleResize);
+  });
 </script>
 
 <div class="tile">
   <div class="tile__media">
-    {#if videoName}
+    {#if isDesktop && videoName}
       <div class="tile__video">
-        <video autoplay loop>
+        <video autoplay muted loop>
           <source src={`/${videoName}`} />
         </video>
       </div>
@@ -20,7 +33,7 @@
       {#if imageName}
         <img src={`/${imageName}`} alt={`${title} Project`} />
       {:else}
-        <img src={``} alt={`${title} Project`} />
+        <img src={`/project-placeholder.webp`} alt={`${title} Project`} />
       {/if}
     </div>
   </div>
@@ -61,20 +74,10 @@
       box-shadow 0.4s;
   }
 
-  .tile:hover {
-    transform: translate(5px, -10px) scale(1.2);
-    box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    opacity: 1;
-    filter: brightness(100%);
-  }
-
   .tile__media {
     height: 100%;
     width: 100%;
     position: absolute;
-    filter: brightness(30%);
-    transition: filter 0.5s;
   }
 
   .tile__image,
@@ -90,22 +93,8 @@
     object-fit: fill;
   }
 
-  .tile:hover .tile__media {
-    filter: brightness(100%);
-  }
-
   .tile__video {
     display: none;
-  }
-
-  .tile:hover .tile__media:has(video) {
-    .tile__video {
-      display: block;
-    }
-
-    .tile__image {
-      display: none;
-    }
   }
 
   .tile__title {
@@ -113,50 +102,28 @@
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    bottom: 1rem;
-    left: 1rem;
-    transition: bottom 0.5s ease-out;
-    position: absolute;
-  }
-
-  .tile:hover .tile__title {
     bottom: 8rem;
-    transition: bottom 0.5s ease-out;
+    left: 1rem;
+    position: absolute;
   }
 
   .tile__infoBackground {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3rem;
-    transform: scaleY(1);
-    transition: transform 0.7s ease-out;
-    transform-origin: bottom;
-  }
-
-  .tile:hover .tile__infoBackground {
-    transform: scaleY(3.3);
-    transition: transform 0.5s ease-out;
+    height: 10.5rem;
   }
 
   .tile__infoDetails {
     position: absolute;
-    transform: scaleY(0);
-    transition: transform 0.5s ease-out;
-    transform-origin: bottom;
     bottom: 1rem;
     left: 1rem;
-  }
-
-  .tile:hover .tile__infoDetails {
-    transform: scaleY(1);
-    transition: transform 0.5s ease-out;
   }
 
   .tile__list {
@@ -182,17 +149,75 @@
     margin-right: 0.5rem;
   }
 
-  .tile__icon:hover {
-    filter: grayscale(100%) brightness(200%);
-    margin-right: 0.5rem;
-    transform: scale(1.2);
-    transition: transform 0.2s ease-out;
-  }
-
-  .tile__icon:active {
-    transform: scale(0.9);
-  }
-
   @media screen and (min-width: 1280px) {
+    .tile:hover {
+      transform: translate(5px, -10px) scale(1.2);
+      box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.6);
+      z-index: 10;
+      opacity: 1;
+      filter: brightness(100%);
+    }
+
+    .tile__media {
+      filter: brightness(30%);
+      transition: filter 0.5s;
+    }
+
+    .tile:hover .tile__media {
+      filter: brightness(100%);
+    }
+
+    .tile:hover .tile__media:has(video) {
+      .tile__video {
+        display: block;
+      }
+
+      .tile__image {
+        display: none;
+      }
+    }
+
+    .tile__title {
+      bottom: 1rem;
+      transition: bottom 0.5s ease-out;
+    }
+
+    .tile:hover .tile__title {
+      bottom: 8rem;
+      transition: bottom 0.5s ease-out;
+    }
+
+    .tile__infoBackground {
+      transition: transform 0.7s ease-out;
+      transform-origin: bottom;
+      height: 3rem;
+    }
+
+    .tile:hover .tile__infoBackground {
+      transform: scaleY(3.3);
+      transition: transform 0.5s ease-out;
+    }
+
+    .tile__infoDetails {
+      transform: scaleY(0);
+      transition: transform 0.5s ease-out;
+      transform-origin: bottom;
+    }
+
+    .tile:hover .tile__infoDetails {
+      transform: scaleY(1);
+      transition: transform 0.5s ease-out;
+    }
+
+    .tile__icon:hover {
+      filter: grayscale(100%) brightness(200%);
+      margin-right: 0.5rem;
+      transform: scale(1.2);
+      transition: transform 0.2s ease-out;
+    }
+
+    .tile__icon:active {
+      transform: scale(0.9);
+    }
   }
 </style>

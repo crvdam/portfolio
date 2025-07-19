@@ -44,7 +44,7 @@
       var(--background-clr-projects3) 100%
     );
     color: var(--background-clr-hero);
-    padding: 3rem 0;
+    padding: 8rem 0;
     margin: auto;
   }
 
@@ -53,13 +53,13 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    gap: 2rem;
+    gap: 4rem;
     max-width: 1400px;
   }
 
   .projects__header {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
     text-align: center;
   }
 
@@ -74,6 +74,7 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: auto;
+      gap: 4rem;
     }
 
     .projects__header {
