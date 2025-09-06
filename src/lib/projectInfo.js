@@ -1,10 +1,20 @@
 export const projects = [
   {
+    title: "Movie Database",
+    imageName: "project-movies.webp",
+    description:
+      "Uses TMDB API. Infinite scroll. Background adapts to hero image's colors.",
+    github: "https://github.com/crvdam/moviedb",
+    stack: ["Vue", "Vue Router", "Vite"],
+    videoName: "project-movies.webm",
+    videoExternalSource: "",
+  },
+  {
     title: "Messenger",
     imageName: "project-messenger.webp",
     description:
       "Fullstack capstone project for Harvard's CS50 Web, written in vanilla JS and Django.",
-    github: "https://github.com/crvdam",
+    github: "https://github.com/crvdam/messenger",
     web: "",
     stack: ["JavaScript", "Python", "Django"],
     videoName: "project-messenger.webm",
@@ -27,16 +37,6 @@ export const projects = [
     github: "https://github.com/crvdam/real-estate",
     stack: ["Vue", "Vue Router", "Pinia", "Vite"],
     videoName: "project-realestate.webm",
-    videoExternalSource: "",
-  },
-  {
-    title: "Movie Database",
-    imageName: "project-movies.webp",
-    description:
-      "Uses TMDB API. Infinite scroll. Background adapts to hero image's colors.",
-    github: "https://github.com/crvdam/movies",
-    stack: ["Vue", "Vue Router", "Vite"],
-    videoName: "project-movies.webm",
     videoExternalSource: "",
   },
 ];

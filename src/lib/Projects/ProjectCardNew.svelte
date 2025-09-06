@@ -3,8 +3,7 @@
   import githubIcon from "/ic-github-dark.png?url";
   import internetIcon from "/ic-internet-dark.png?url";
 
-  let { title, imageName, videoName, description, github, web, stack, index } =
-    $props();
+  const { project } = $props();
 
   let isDesktop = $state(false);
 
@@ -17,49 +16,55 @@
 
     window.addEventListener("resize", handleResize);
   });
-
-  // let rotation = -20 + index * 10;
 </script>
 
 <div class="tile">
   <div class="tile__media">
-    {#if isDesktop && videoName}
+    {#if isDesktop && project.videoName}
       <div class="tile__video">
         <video autoplay muted loop>
-          <source src={`/${videoName}`} />
+          <source src={`/${project.videoName}`} />
         </video>
       </div>
     {/if}
 
     <div class="tile__image">
-      {#if imageName}
-        <img src={`/${imageName}`} alt={`${title} Project`} />
+      {#if project.imageName}
+        <img src={`/${project.imageName}`} alt={`${project.title} Project`} />
       {:else}
-        <img src={`/project-placeholder.webp`} alt={`${title} Project`} />
+        <img
+          src={`/project-placeholder.webp`}
+          alt={`${project.title} Project`}
+        />
       {/if}
     </div>
   </div>
 
   <div class="tile__infoBackground"></div>
 
-  <h4 class="tile__title">{title}</h4>
+  <h4 class="tile__title">{project.title}</h4>
   <div class="tile__infoDetails">
     <ul class="tile__list">
-      {#each stack as stackItem}
+      {#each project.stack as stackItem}
         <li class="tile__stackItem">{stackItem}</li>
       {/each}
     </ul>
 
     <div class="tile_list">
-      {#if github}
-        <a href={github}>
-          <img class="tile__icon" src={githubIcon} alt="Github link" />
+      {#if project.github}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="icon"
+          href={project.github}
+        >
+          <img src={githubIcon} alt="Github link" />
         </a>
       {/if}
 
-      {#if web}
-        <a href={web}>
-          <img class="tile__icon" src={internetIcon} alt="Project link" />
+      {#if project.web}
+        <a class="icon" href={project.web}>
+          <img src={internetIcon} alt="Project link" />
         </a>
       {/if}
     </div>
@@ -68,8 +73,8 @@
 
 <style>
   .tile {
-    width: 400px;
-    height: 300px;
+    height: 200px;
+    width: 80vw;
     position: relative;
     transition:
       transform 0.5s,
@@ -86,6 +91,12 @@
   .tile__video {
     width: 100%;
     height: 100%;
+    border-radius: 7px;
+  }
+
+  img,
+  video {
+    border-radius: 7px;
   }
 
   .tile__video {
@@ -94,10 +105,9 @@
 
   .tile__title {
     color: var(--background-clr-card);
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
-    bottom: 8rem;
+    bottom: 2.5rem;
     left: 1rem;
     position: absolute;
   }
@@ -106,55 +116,64 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--background);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     padding: 1rem;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
-    height: 10.5rem;
+    height: 4.5rem;
   }
 
   .tile__infoDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 0.5rem;
+    padding: 0 1rem;
   }
 
   .tile__list {
     display: flex;
+    align-items: flex-end;
     gap: 0.5rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
   }
 
   .tile__stackItem {
     padding: 5px;
-    background-color: var(--background-clr-projects1);
-    color: var(--background-clr-hero);
     border-radius: 5px;
     font-size: 0.7rem;
     font-weight: 600;
   }
 
-  .tile__icon {
-    height: 3rem;
-    width: 3rem;
-    margin-right: 0.5rem;
+  .icon img {
+    height: 35px;
+    width: 35px;
+  }
+
+  @media screen and (min-width: 641px) {
+    .tile {
+      width: 300px;
+      height: 250px;
+    }
   }
 
   @media screen and (min-width: 1280px) {
     .tile:hover {
-      transform: translate(5px, -10px) scale(1.2);
-      box-shadow: -5px 20px 5px rgba(0, 0, 0, 0.6);
+      transform: translateY(-10px) scale(1);
       z-index: 10;
       opacity: 1;
       filter: brightness(100%);
     }
 
     .tile__media {
-      filter: brightness(30%);
+      filter: brightness(100%);
       transition: filter 0.5s;
+      position: relative;
     }
 
     .tile:hover .tile__media {
@@ -177,19 +196,21 @@
     }
 
     .tile:hover .tile__title {
-      bottom: 8rem;
-      transition: bottom 0.3s ease-out;
+      bottom: 3rem;
+      transition: bottom 0.5s ease-out;
     }
 
     .tile__infoBackground {
-      transition: transform 0.3s ease-out;
       transform-origin: bottom;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
       height: 3rem;
+      transition: transform 0.3s ease-out;
     }
 
     .tile:hover .tile__infoBackground {
-      transform: scaleY(3.3);
-      transition: transform 0.3s ease-out;
+      transition: transform 0.5s ease-out;
+      transform: scaleY(1.7);
     }
 
     .tile__infoDetails {
@@ -198,19 +219,8 @@
 
     .tile:hover .tile__infoDetails {
       opacity: 1;
-      transition: opacity 0.2s ease-out;
+      transition: opacity 0.1s ease-out;
       transition-delay: 0.3s;
-    }
-
-    .tile__icon:hover {
-      filter: grayscale(100%) brightness(200%);
-      margin-right: 0.5rem;
-      transform: scale(1.2);
-      transition: transform 0.2s ease-out;
-    }
-
-    .tile__icon:active {
-      transform: scale(0.9);
     }
   }
 </style>

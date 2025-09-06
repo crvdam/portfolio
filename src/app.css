@@ -7,23 +7,28 @@
 }
 
 :root {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  --background-clr-hero: #010618;
-  --background-clr-projects1: #cad3f4;
-  --background-clr-projects2: #cad3f4;
-  --background-clr-projects3: #cad3f4;
-  --background-clr-card: #eef5ff;
+  font-family: "Roboto", sans-serif;
+  --background: #04020d;
   --text-clr-primary: #ff6500;
-  --text-clr-secondary: #ffffff;
-  --text-clr-tertiary: #a4bad8;
-  --text-clr-quaternary: #d7e6fd;
-  background-color: var(--background-clr-hero);
-  overflow-x: hidden;
+  --text-clr-secondary: #ececec;
+  --text-clr-tertiary: #ebebebd2;
+  --tablet-size: 641px;
+  --desktop-size: 1024px;
 }
 
 body {
-  background-color: var(--background-clr-hero);
+  background-color: var(--background);
+}
+
+.app {
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    padding: 2rem;
+  }
 }
 
 h1 {
@@ -31,21 +36,39 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-}
-
-h3 {
   font-size: 1.5rem;
 }
 
-p {
+h3 {
   font-size: 1rem;
-  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.4rem;
 }
 
 button {
-  background: none;
-  border: none;
+  letter-spacing: 0.2em;
+}
+
+@media screen and (min-width: 641px) {
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+button {
+  background: unset;
+  font-size: unset;
+  border: unset;
+  color: var(--text-clr-secondary);
+  cursor: pointer;
 }
 
 img,
@@ -57,4 +80,38 @@ video {
 
 ul {
   list-style: none;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-left: 0.5rem;
+  justify-self: flex-start;
+  cursor: pointer;
+  opacity: 0.9;
+
+  img {
+    filter: brightness(0) invert(1);
+
+    &:hover {
+      transition: all 0.3s;
+      transform: scale(1.2);
+      filter: unset;
+    }
+
+    &:active {
+      transition: all 0s;
+      transform: scale(1);
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
