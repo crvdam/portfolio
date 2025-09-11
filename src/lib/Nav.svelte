@@ -32,7 +32,7 @@
     opacity: 0;
     animation: fade-in 2s forwards;
     animation-delay: 2s;
-    margin: 4rem 0 4rem;
+    margin: 2rem 0 2rem;
   }
 
   ul {
@@ -50,7 +50,7 @@
 
   button {
     transition: all 0.3s;
-    padding: 10px;
+    padding: 0.6rem;
   }
 
   button:hover,

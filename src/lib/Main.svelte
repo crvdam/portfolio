@@ -42,6 +42,7 @@
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+    padding: 0 0.8rem;
   }
 
   section {
