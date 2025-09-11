@@ -17,6 +17,10 @@
     flex-direction: column;
     align-items: center;
 
+    svg {
+      height: 2.5rem;
+    }
+
     svg path {
       fill: transparent;
       stroke: var(--text-clr-primary);
@@ -37,14 +41,15 @@
   @media screen and (min-width: 768px) {
     header {
       display: block;
-    }
 
-    svg {
-      width: 400px;
-    }
+      svg {
+        height: auto;
+        width: 400px;
+      }
 
-    .subtitle {
-      font-size: 0.9rem;
+      .subtitle {
+        font-size: 0.9rem;
+      }
     }
   }
 

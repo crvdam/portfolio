@@ -22,6 +22,8 @@
 
   @media screen and (min-width: 768px) {
     .tileWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
   }

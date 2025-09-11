@@ -74,7 +74,7 @@
 <style>
   .tile {
     height: 200px;
-    width: 80vw;
+    width: 280px;
     position: relative;
     transition:
       transform 0.5s,
@@ -157,8 +157,8 @@
 
   @media screen and (min-width: 641px) {
     .tile {
-      width: 300px;
-      height: 250px;
+      width: 280px;
+      height: 200px;
     }
   }
 
