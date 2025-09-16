@@ -17,10 +17,10 @@
 <br />
 <p>
   In addition to my work at Accessify, I’m expanding my skills toward full-stack
-  development by learning a modern backend stack. I also enjoy building websites
-  in my free time and am open to freelance opportunities where I can put my
-  creativity and technical skills to work. If you have a project in mind, feel
-  free to <a href="mailto:casparvandam@gmail.com">get in touch!</a>
+  development by learning a modern back-end stack. I also enjoy building
+  websites in my free time and am open to freelance opportunities where I can
+  put my creativity and technical skills to work. If you have a project in mind,
+  feel free to <a href="mailto:casparvandam@gmail.com">get in touch!</a>
 </p>
 
 <style>
