@@ -9,10 +9,10 @@
 </p>
 <br />
 <p>
-  A few years of self-teaching later I have made the jump to web development and
-  joined <strong>Accessify</strong>
-  as a <strong>Front-End Developer</strong>. There I work on their B2B SaaS
-  platform.
+  After several years of self-directed learning, I transitioned into web
+  development and joined <strong>Accessify</strong> as a
+  <strong>Front-End Developer</strong>. There, I contribute to the development
+  of their online business SaaS platform designed for B2B clients.
 </p>
 <br />
 <p>
