@@ -1,60 +1,54 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
   font-family: "Roboto", sans-serif;
-  --background: #04020d;
-  --text-clr-primary: #ff6500;
-  --text-clr-secondary: #ececec;
-  --text-clr-tertiary: #ebebebd2;
-  --tablet-size: 641px;
-  --desktop-size: 1024px;
+  --clr-primary: #ff6500;
+  --clr-secondary: #1c1c23;
+  --clr-main: #e3e3e3;
+  --bg-main: #121213;
+  --bg-tile: #ececec;
+  --clr-tile: #121213;
+  --bg-mobile-menu: #ececec;
+  --clr-mobile-menu: #121213;
+  --clr-desktop-menu: #ececec;
 }
 
 body {
-  background-color: var(--background);
-}
-
-.app {
-  min-height: calc(100vh - 2.5rem);
-  min-height: calc(100dvh - 2.5rem);
-}
-
-@media screen and (min-width: 768px) {
-  .app {
-    min-height: calc(100vh - 4rem);
-    padding: 2rem;
-  }
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--clr-main);
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 14rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 p {
-  line-height: 1.4rem;
+  line-height: 1.5rem;
 }
 
-button {
-  letter-spacing: 0.2em;
+a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 641px) {
@@ -66,9 +60,8 @@ button {
 
 button {
   background: unset;
-  font-size: unset;
   border: unset;
-  color: var(--text-clr-secondary);
+  color: var(--clr-secondary);
   cursor: pointer;
 }
 
@@ -83,35 +76,33 @@ ul {
   list-style: none;
 }
 
-.icon {
-  height: 30px;
-  width: 30px;
-  margin-left: 0.5rem;
-  justify-self: flex-start;
-  cursor: pointer;
-  opacity: 0.9;
-
-  img {
-    filter: brightness(0) invert(1);
-
-    &:hover {
-      transition: all 0.3s;
-      transform: scale(1.2);
-      filter: unset;
-    }
-
-    &:active {
-      transition: all 0s;
-      transform: scale(1);
-    }
-  }
+.underline-animation {
+  position: relative;
 }
 
-@keyframes fade-in {
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--clr-primary);
+  transition: width 0.3s ease;
+}
+
+.underline-animation:hover::after {
+  width: 100%;
+}
+
+.underline-animation:active::after {
+  width: 0;
+}
+
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }

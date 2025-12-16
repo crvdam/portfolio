@@ -25,28 +25,25 @@
 
 <style>
   footer {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    color: var(--text-clr-tertiary);
-    height: 4rem;
-    font-size: 0.7rem;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
     opacity: 0;
     animation: fade-in 2s forwards;
     animation-delay: 2.5s;
-    margin-top: 6rem;
   }
 
   .copyright {
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: flex-end;
+    color: var(--text-clr-tertiary);
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .socials {
     height: 100%;
+    margin-bottom: 1rem;
 
     a {
       display: inline-block;
@@ -54,13 +51,5 @@
   }
 
   @media screen and (min-width: 768px) {
-    footer {
-      flex-direction: row;
-      margin-top: unset;
-    }
-
-    .socials {
-      margin-top: 4rem;
-    }
   }
 </style>

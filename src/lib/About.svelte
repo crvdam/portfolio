@@ -1,35 +1,74 @@
-<script></script>
+<script>
+  export let goToPage;
+</script>
 
-<p>
-  After nearly a decade working as a chef in kitchens ranging from casual
-  bistros to Michelin-starred restaurants, I decided to change directions. I
-  stumbled upon an online computer science course and was immediately hooked.
-  What started as curiosity quickly became a passion as hours and days
-  disappeared while I dove deeper into coding.
-</p>
-<br />
-<p>
-  After several years of self-directed learning, I transitioned into web
-  development and joined <strong>Accessify</strong> as a
-  <strong>Front-End Developer</strong>. There, I contribute to the development
-  of their online business SaaS platform designed for B2B clients.
-</p>
-<br />
-<p>
-  In addition to my work at Accessify, I’m expanding my skills toward full-stack
-  development by learning a modern back-end stack. I also enjoy building
-  websites in my free time and am open to freelance opportunities where I can
-  put my creativity and technical skills to work. If you have a project in mind,
-  feel free to <a href="mailto:casparvandam@gmail.com">get in touch!</a>
-</p>
+<div>
+  <h2>
+    I’m a front-end developer who enjoys clean code, good design, and bringing
+    ideas to life.
+  </h2>
+  <p>
+    I like building websites that are simple, polished, and effective.<button
+      class="underline-animation"
+      onclick={() => goToPage("contact")}>Happy to chat</button
+    > if you’re interested in working together!
+  </p>
+
+  <h1>Welcome</h1>
+</div>
 
 <style>
-  a {
-    color: var(--text-clr-primary);
-    text-decoration: none;
+  div {
+    margin-left: auto;
+  }
 
-    &:hover {
-      color: var(--text-clr-secondary);
+  h1 {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    font-size: 24vw;
+    line-height: 0.7;
+    color: var(--clr-primary);
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    max-width: 900px;
+    margin-left: auto;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  button {
+    color: var(--clr-primary);
+    transition: 0.2s;
+    position: relative;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    color: var(--clr-main);
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      bottom: 0px;
+    }
+
+    h2 {
+      text-align: right;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: right;
     }
   }
 </style>

@@ -1,76 +1,74 @@
 <script>
   import About from "./About.svelte";
-  import Projects from "./Projects/Projects.svelte";
+  import ProjectCarousel from "./Projects/ProjectCarousel.svelte";
+  import ProjectList from "./Projects/ProjectList.svelte";
   import Contact from "./Contact.svelte";
   import { fade } from "svelte/transition";
+  import Portfolio from "./Portfolio.svelte";
+  import { onMount } from "svelte";
 
   export let activePage;
-  let animate = false;
-  let triggeredOnce = true;
+  export let goToPage;
+
   let animationDelay = 0;
+  let animate = false;
 
-  $: if (activePage && !triggeredOnce) {
-    animate = true;
-    triggeredOnce = true;
-
+  onMount(() => {
     setTimeout(() => {
-      animationDelay = 0;
+      animate = true;
     }, 2000);
-  }
+  });
 </script>
 
 <main class:animate-once={animate}>
   {#if activePage === "about"}
     <section in:fade={{ duration: 500, delay: animationDelay }}>
-      <About />
+      <About {goToPage} />
     </section>
   {:else if activePage === "projects"}
+    <!-- <section in:fade={{ duration: 500, delay: animationDelay }}>
+      <ProjectCarousel />
+    </section> -->
     <section in:fade={{ duration: 500, delay: animationDelay }}>
-      <Projects />
+      <ProjectList />
     </section>
   {:else if activePage === "contact"}
     <section in:fade={{ duration: 500, delay: animationDelay }}>
       <Contact />
+    </section>
+  {:else if activePage === "portfolio"}
+    <section in:fade={{ duration: 500, delay: animationDelay }}>
+      <Portfolio />
     </section>
   {/if}
 </main>
 
 <style>
   main {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-    padding: 0 0.8rem;
+    opacity: 0;
+    padding: 4rem 1rem 0;
+    max-width: 1200px;
+    margin: 120px auto 0;
   }
 
-  section {
-    margin: auto;
+  .animate-once {
+    animation: mainAppear 2s ease forwards;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     main {
-      height: 70%;
-      width: 70%;
+      padding: 8rem 2rem 0;
+      margin-top: 0;
+    }
+  }
+
+  @keyframes mainAppear {
+    0% {
+      opacity: 0;
     }
 
-    .animate-once {
-      animation: mainAppear 1s ease forwards;
-    }
-
-    @keyframes mainAppear {
-      0% {
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        background-color: rgba(0, 0, 0, 0);
-        backdrop-filter: blur(0);
-      }
-
-      100% {
-        box-shadow: 0px 0px 10px 15px rgba(20, 20, 50, 0.3);
-        background-color: rgba(20, 20, 50, 0.3);
-        backdrop-filter: blur(15px);
-      }
+    100% {
+      opacity: 1;
     }
   }
 </style>
