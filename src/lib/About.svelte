@@ -4,17 +4,14 @@
 
 <div>
   <h2>
-    I’m a front-end developer who enjoys clean code, good design, and bringing
-    ideas to life.
+    Chef turned front-end developer. Lifelong learner with a love for code.
   </h2>
   <p>
-    I like building websites that are simple, polished, and effective.<button
+    I like building websites that are simple, polished, and effective. <button
       class="underline-animation"
       onclick={() => goToPage("contact")}>Happy to chat</button
     > if you’re interested in working together!
   </p>
-
-  <h1>Welcome</h1>
 </div>
 
 <style>
@@ -29,7 +26,7 @@
     font-size: 24vw;
     line-height: 0.7;
     color: var(--clr-primary);
-    opacity: 0.2;
+    opacity: 0.1;
     z-index: -1;
   }
 
@@ -37,7 +34,6 @@
     text-align: left;
     font-size: 1.9rem;
     margin-bottom: 1rem;
-    max-width: 900px;
     margin-left: auto;
   }
 

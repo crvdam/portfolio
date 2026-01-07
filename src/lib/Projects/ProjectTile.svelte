@@ -160,7 +160,7 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .project-tile:hover .project-video {
+    .project-video:hover {
       opacity: 1;
       transition: 0.2s;
     }

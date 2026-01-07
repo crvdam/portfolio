@@ -49,6 +49,8 @@
     padding: 4rem 1rem 0;
     max-width: 1200px;
     margin: 120px auto 0;
+    background: var(--bg-main);
+    min-height: calc(100vh - 120px);
   }
 
   .animate-once {
@@ -57,7 +59,7 @@
 
   @media screen and (min-width: 768px) {
     main {
-      padding: 8rem 2rem 0;
+      padding: 8rem 4rem 0;
       margin-top: 0;
     }
   }

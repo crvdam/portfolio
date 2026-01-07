@@ -34,7 +34,7 @@
             {#if index === 0}
               <li>{feature}</li>
             {:else}
-              <span>|</span>
+              ,
               <li>{feature}</li>
             {/if}
           {/each}
@@ -101,7 +101,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .project-item {
@@ -109,7 +109,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    gap: 1rem;
+    gap: 2rem;
     background-color: var(--clr-secondary);
     border-radius: 20px;
   }
@@ -121,8 +121,7 @@
   }
 
   h3 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
 
   h2 {
@@ -138,22 +137,19 @@
 
   .feature-list li {
     display: inline-block;
-    font-weight: 700;
-  }
-
-  .feature-list span {
-    margin: 0 0.5rem;
+    font-weight: 400;
   }
 
   .stack-list {
     display: flex;
     flex-wrap: wrap;
+    font-size: 14px;
     gap: 0.5rem;
     margin-bottom: 1rem;
   }
 
   .stack-item {
-    font-weight: 700;
+    font-weight: 400;
     padding: 0.25rem 0.5rem;
     background-color: var(--clr-main);
     color: var(--bg-main);
@@ -181,13 +177,13 @@
 
   .media-wrapper {
     position: relative;
-    height: 250px;
+    height: 200px;
     aspect-ratio: 16 / 9;
   }
 
   .media-wrapper img,
   .media-wrapper video {
-    height: 250px;
+    height: 200px;
     border-radius: 20px;
     margin-bottom: auto;
   }

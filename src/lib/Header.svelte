@@ -35,6 +35,7 @@
     right: 0;
     z-index: 100;
     background-color: var(--bg-main);
+    border-bottom: 1px solid var(--bg-site);
   }
 
   svg {
