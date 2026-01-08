@@ -171,6 +171,10 @@
     width: 48px;
   }
 
+  .project-image {
+    overflow: hidden;
+  }
+
   img {
     height: 100%;
     width: 100%;
