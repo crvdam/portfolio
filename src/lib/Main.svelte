@@ -46,7 +46,7 @@
 <style>
   main {
     opacity: 0;
-    padding: 4rem 1rem 0;
+    padding: 2rem 1rem 0;
     max-width: 1200px;
     margin: 120px auto 0;
     background: var(--bg-main);
@@ -59,7 +59,7 @@
 
   @media screen and (min-width: 768px) {
     main {
-      padding: 8rem 4rem 0;
+      padding: 2rem 2rem 0;
       margin-top: 0;
     }
   }

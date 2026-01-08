@@ -17,10 +17,14 @@
   });
 </script>
 
-<h2 class="intro-text">
-  This is a selection of the projects I've used to explore new languages,
-  frameworks and libraries.
-</h2>
+<div class="intro-text">
+  <h1>Personal Projects</h1>
+
+  <p>
+    These projects reflect my approach to learning through building. Every new project is an experiment, designed to introduce me to a new language, library, or framework.
+    At the moment, I’m focusing on Next.js, with plans to explore back-end development using C# and .NET Core next. I’ll continue to update this page as projects are completed.
+  </p>
+</div>
 
 <ul class="project-list">
   {#each projects as project, index (project.id)}
@@ -94,10 +98,15 @@
 
 <style>
   .intro-text {
-    margin-bottom: 4rem;
+    margin-left: 1rem;
+
+    p {
+      margin-bottom: 1rem;
+    }
   }
 
   .project-list {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,6 +215,10 @@
   }
 
   @media screen and (min-width: 1024px) {
+    .intro-text {
+      width: 70%;
+    }
+
     .project-item {
       flex-direction: row;
       text-align: left;
