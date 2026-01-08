@@ -102,12 +102,6 @@
 <div class="nav-toggle-icon open closing" style="display: none;"></div>
 
 <style>
-  nav {
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 2s;
-  }
-
   .nav-items-wrapper {
     position: fixed;
     top: 0;
@@ -308,9 +302,9 @@
 
     .nav-items li {
       padding-left: 5rem;
-        opacity: 0;
-        transform: translateY(10px);
-        animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeIn 1.5s ease forwards;
     }
 
     .nav-items li:nth-child(1) {
