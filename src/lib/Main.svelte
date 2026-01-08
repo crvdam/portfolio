@@ -16,7 +16,7 @@
   onMount(() => {
     setTimeout(() => {
       animate = true;
-    }, 2000);
+    }, 2500);
   });
 </script>
 
@@ -54,7 +54,7 @@
   }
 
   .animate-once {
-    animation: mainAppear 2s ease forwards;
+    animation: mainAppear 1s ease forwards;
   }
 
   @media screen and (min-width: 768px) {

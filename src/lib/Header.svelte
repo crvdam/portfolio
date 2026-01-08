@@ -55,7 +55,7 @@
     color: var(--clr-tertiary);
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
   }
 
   @media screen and (min-width: 768px) {

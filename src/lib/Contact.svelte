@@ -1,8 +1,9 @@
 <script></script>
 
 <div>
-  <h2>I'm always open to discuss freelance projects or collaborations.</h2>
-  <h2>You can reach me at:</h2>
+  <h1>Contact</h1>
+  <h3>I'm always open to discuss freelance projects or collaborations.</h3>
+  <p>You can reach me at:</p>
   <ul>
     <li>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"

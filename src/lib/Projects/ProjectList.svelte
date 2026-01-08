@@ -21,7 +21,7 @@
   <h1>Personal Projects</h1>
 
   <p>
-    These projects reflect my approach to learning through building. Every new project is an experiment, designed to introduce me to a new language, library, or framework.
+    These projects reflect my approach to learning through building. Every new project is an exercise, designed to introduce me to a new concept, framework, or language.
     At the moment, I’m focusing on Next.js, with plans to explore back-end development using C# and .NET Core next. I’ll continue to update this page as projects are completed.
   </p>
 </div>
@@ -192,7 +192,7 @@
   .media-wrapper {
     position: relative;
     height: 200px;
-    aspect-ratio: 16 / 9;
+    width: 355px
   }
 
   .media-wrapper img,

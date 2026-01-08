@@ -3,9 +3,10 @@
 </script>
 
 <div>
-  <h2>
-    Chef turned front-end developer. Lifelong learner with a love for code.
-  </h2>
+  <h1>
+    Chef turned front-end developer. 
+  </h1>
+  <h2>Lifelong learner with a love for code.</h2>
   <p>
     I like building websites that are simple, polished, and effective. <button
       class="underline-animation"
@@ -16,30 +17,17 @@
 
 <style>
   div {
-    margin-top: 10rem;
+    margin-top: 2rem;
     margin-left: auto;
+    text-align: left;
   }
 
   h1 {
-    position: fixed;
-    bottom: 100px;
-    left: 0;
-    font-size: 24vw;
-    line-height: 0.7;
-    color: var(--clr-primary);
-    opacity: 0.1;
-    z-index: -1;
+    margin-bottom: 1rem;
   }
 
   h2 {
-    text-align: left;
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-
-  p {
-    text-align: left;
+    margin-bottom: 2rem;
   }
 
   button {
@@ -54,17 +42,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    h1 {
-      bottom: 0px;
-    }
-
-    h2 {
-      text-align: right;
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
+    div {
+      margin-top: 2rem;
       text-align: right;
     }
   }

@@ -11,10 +11,10 @@
   --clr-primary: #ff6500;
   --clr-secondary: #1c1c23;
   --clr-main: #e3e3e3;
-  --bg-main: #121213;
-  --bg-site: #000000;
+  --bg-main: #1b1b1eff;
+  --bg-site: #0d0d0eff;
   --bg-tile: #ececec;
-  --clr-tile: #121213;
+  --clr-tile: #2e2e30ff;
   --bg-mobile-menu: #ececec;
   --clr-mobile-menu: #121213;
   --clr-desktop-menu: #ececec;
@@ -33,11 +33,12 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  line-height: 3rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 h4 {

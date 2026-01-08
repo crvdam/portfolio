@@ -105,7 +105,7 @@
   nav {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    animation-delay: 1s;
+    animation-delay: 2s;
   }
 
   .nav-items-wrapper {
