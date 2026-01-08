@@ -16,7 +16,7 @@
   onMount(() => {
     setTimeout(() => {
       animate = true;
-    }, 2500);
+    }, 2800);
   });
 </script>
 
@@ -50,27 +50,19 @@
     max-width: 1200px;
     margin: 120px auto 0;
     background: var(--bg-main);
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 173px);
+    transform: translateY(10px);
   }
 
   .animate-once {
-    animation: mainAppear 1s ease forwards;
+    animation: fadeIn 1.5s ease forwards;
   }
 
   @media screen and (min-width: 768px) {
     main {
-      padding: 2rem 2rem 0;
+      padding: 2rem;
       margin-top: 0;
     }
   }
 
-  @keyframes mainAppear {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
 </style>

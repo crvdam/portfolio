@@ -117,9 +117,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 1rem;
     gap: 2rem;
-    background-color: var(--clr-secondary);
+    background-color: var(--bg-tile);
     border-radius: 20px;
   }
 
@@ -198,9 +198,9 @@
   .media-wrapper img,
   .media-wrapper video {
     height: 200px;
+    width: 280px;
     border-radius: 20px;
     margin-bottom: auto;
-    width: 100%;
   }
 
   .media-wrapper img {
@@ -228,6 +228,7 @@
     .project-item {
       flex-direction: row;
       text-align: left;
+      padding: 2rem;
     }
 
     .reverse {
@@ -246,5 +247,11 @@
     .feature-list {
       margin-bottom: 0;
     }
+
+    .media-wrapper img,
+    .media-wrapper video {
+      height: 200px;
+      width: 100%;
+   }
   }
 </style>

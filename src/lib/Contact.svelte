@@ -49,6 +49,7 @@
   a {
     color: var(--clr-sceondary);
     text-decoration: none;
+    border-bottom: 1px solid var(--clr-primary);
 
     &:hover {
       color: var(--clr-primary);
@@ -72,5 +73,6 @@
   }
 
   @media screen and (min-width: 768px) {
+
   }
 </style>

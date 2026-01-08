@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-  <div class="socials">
+  <!-- <div class="socials">
     <a
       target="_blank"
       rel="noopener noreferrer"
@@ -19,35 +19,28 @@
     <a href="mailto:casparvandam@gmail.com" class="icon"
       ><img src="ic-email-dark.png" alt="GitHub" /></a
     >
-  </div>
+  </div> -->
   <span class="copyright">© <span>{currentYear}</span> - Caspar van Dam</span>
 </footer>
 
 <style>
   footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
     opacity: 0;
-    animation: fade-in 2s forwards;
-    animation-delay: 2.5s;
+    text-align: center;
+    transform: translateY(10px);
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 3s;
+    background-color: var(--bg-main);
+    padding: 0.5rem 0;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 0;
+    border-top: 1px solid var(--bg-site);
   }
 
   .copyright {
     color: var(--text-clr-tertiary);
-    font-size: 0.6rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .socials {
-    height: 100%;
-    margin-bottom: 1rem;
-
-    a {
-      display: inline-block;
-    }
+    font-size: 0.8rem;
   }
 
   @media screen and (min-width: 768px) {

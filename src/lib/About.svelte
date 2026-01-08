@@ -19,7 +19,6 @@
   div {
     margin-top: 2rem;
     margin-left: auto;
-    text-align: left;
   }
 
   h1 {
@@ -42,9 +41,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    div {
-      margin-top: 2rem;
-      text-align: right;
-    }
+
   }
 </style>

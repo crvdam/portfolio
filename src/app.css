@@ -13,8 +13,7 @@
   --clr-main: #e3e3e3;
   --bg-main: #1b1b1eff;
   --bg-site: #0d0d0eff;
-  --bg-tile: #ececec;
-  --clr-tile: #2e2e30ff;
+  --bg-tile: #2a2d38ff;
   --bg-mobile-menu: #ececec;
   --clr-mobile-menu: #121213;
   --clr-desktop-menu: #ececec;
@@ -103,10 +102,8 @@ ul {
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
+    transform: translateY(0);
   }
 }

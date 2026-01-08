@@ -284,6 +284,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    nav {
+      opacity: 1;
+    }
+
     .nav-toggle {
       display: none;
     }
@@ -304,6 +308,21 @@
 
     .nav-items li {
       padding-left: 5rem;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 1.5s ease forwards;
+    }
+
+    .nav-items li:nth-child(1) {
+      animation-delay: 2.2s;
+    }
+
+    .nav-items li:nth-child(2) {
+      animation-delay: 2.4s;
+    }
+
+    .nav-items li:nth-child(3) {
+      animation-delay: 2.6s;
     }
 
     .socials-wrapper {

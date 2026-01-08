@@ -28,7 +28,7 @@
 <div class="site">
   <Header {activePage} {goToPage} />
   <Main {activePage} {goToPage} />
-  <!-- <Footer /> -->
+  <Footer />
 </div>
 
 <style>
