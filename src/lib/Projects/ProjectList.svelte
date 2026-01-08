@@ -173,6 +173,7 @@
 
   .project-image {
     overflow: hidden;
+    width: 100%;
   }
 
   img {
@@ -199,6 +200,7 @@
     height: 200px;
     border-radius: 20px;
     margin-bottom: auto;
+    width: 100%;
   }
 
   .media-wrapper img {
