@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-  <!-- <div class="socials">
+  <div class="socials">
     <a
       target="_blank"
       rel="noopener noreferrer"
@@ -19,7 +19,7 @@
     <a href="mailto:casparvandam@gmail.com" class="icon"
       ><img src="ic-email-dark.png" alt="GitHub" /></a
     >
-  </div> -->
+  </div>
   <span class="copyright">© <span>{currentYear}</span> - Caspar van Dam</span>
 </footer>
 
@@ -41,6 +41,15 @@
   .copyright {
     color: var(--text-clr-tertiary);
     font-size: 0.8rem;
+  }
+
+  .socials {
+    a {
+      display: inline-block;
+      width: 32px;
+      height: auto;
+      margin: 0 0.3rem;
+    }
   }
 
   @media screen and (min-width: 768px) {
