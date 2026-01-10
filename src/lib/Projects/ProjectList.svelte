@@ -239,7 +239,7 @@
     }
 
     .media-wrapper {
-      max-width: 40%;
+      width: 280px;
     }
 
     .feature-list {
