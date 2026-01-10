@@ -21,8 +21,11 @@
   <h1>Personal Projects</h1>
 
   <p>
-    These projects reflect my approach to learning through building. Every new project is an exercise, designed to introduce me to a new concept, framework, or language.
-    At the moment, I’m focusing on Next.js, with plans to explore back-end development using C# and .NET Core next. I’ll continue to update this page as projects are completed.
+    These projects reflect my approach to learning through building. Every new
+    project is an exercise, designed to introduce me to a new concept,
+    framework, or language. At the moment, I’m focusing on Next.js, with plans
+    to explore back-end development using C# and .NET Core next. I’ll continue
+    to update this page as projects are completed.
   </p>
 </div>
 
@@ -107,20 +110,16 @@
 
   .project-list {
     margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
   }
 
   .project-item {
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 2rem;
     background-color: var(--bg-tile);
     border-radius: 20px;
+    margin-bottom: 1rem;
   }
 
   .project-info-wrapper {
@@ -192,7 +191,6 @@
   .media-wrapper {
     position: relative;
     height: 200px;
-    width: 355px
   }
 
   .media-wrapper img,
@@ -252,6 +250,6 @@
     .media-wrapper video {
       height: 200px;
       width: 100%;
-   }
+    }
   }
 </style>
