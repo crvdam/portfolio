@@ -206,18 +206,6 @@
     margin-bottom: auto;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    .project-item:hover .project-video {
-      opacity: 1;
-      transition: 0.2s;
-    }
-
-    .icon:hover {
-      filter: brightness(0) invert(1);
-      transition: 0.2s;
-    }
-  }
-
   @media screen and (min-width: 1024px) {
     .intro-text {
       width: 70%;

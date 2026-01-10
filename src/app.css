@@ -78,27 +78,39 @@ ul {
   list-style: none;
 }
 
-.underline-animation {
-  position: relative;
-}
+@media (hover: hover) and (pointer: fine) {
+  .underline-animation {
+    position: relative;
+  }
 
-.underline-animation::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: var(--clr-primary);
-  transition: width 0.3s ease;
-}
+  .underline-animation::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--clr-primary);
+    transition: width 0.3s ease;
+  }
 
-.underline-animation:hover::after {
-  width: 100%;
-}
+  .underline-animation:hover::after {
+    width: 100%;
+  }
 
-.underline-animation:active::after {
-  width: 0;
+  .underline-animation:active::after {
+    width: 0;
+  }
+
+  .project-item:hover .project-video {
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  .icon:hover {
+    filter: brightness(0) invert(1);
+    transition: 0.2s;
+  }
 }
 
 @keyframes fadeIn {

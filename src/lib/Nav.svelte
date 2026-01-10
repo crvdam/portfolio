@@ -66,7 +66,8 @@
       <li>
         <button
           class="{activePage === 'about' ? 'active' : ''} underline-animation"
-          onclick={() => handleNavClick("about")}>About</button
+          onclick={() => handleNavClick("about")}
+          aria-label="Navigate to about page">About</button
         >
       </li>
       <!-- <li>
@@ -80,13 +81,15 @@
           class="{activePage === 'projects'
             ? 'active'
             : ''} underline-animation"
-          onclick={() => handleNavClick("projects")}>Personal projects</button
+          onclick={() => handleNavClick("projects")}
+          aria-label="Navigate to personal projects">Personal projects</button
         >
       </li>
       <li>
         <button
           class="{activePage === 'contact' ? 'active' : ''} underline-animation"
-          onclick={() => handleNavClick("contact")}>Contact</button
+          onclick={() => handleNavClick("contact")}
+          aria-label="Navigate to contact page">Contact</button
         >
       </li>
     </ul>
