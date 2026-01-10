@@ -50,7 +50,7 @@
     max-width: 1200px;
     margin: 120px auto 0;
     background: var(--bg-main);
-    min-height: calc(100vh - 173px);
+    min-height: calc(100vh - 209px);
     transform: translateY(10px);
   }
 
@@ -64,5 +64,4 @@
       margin-top: 0;
     }
   }
-
 </style>
